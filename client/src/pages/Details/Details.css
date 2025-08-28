@@ -1,0 +1,185 @@
+
+
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Service Detail Container */
+.service-detail {
+  max-width: 750px; /* Further reduced width */
+  margin: 30px auto;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+ul{
+  list-style: none;
+}
+
+/* Header Section */
+.sd-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.sd-avatar-circle {
+  width: 120px; /* smaller image */
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #d84aff;
+  background-color: #e8f5e9;
+}
+
+.sd-header-info {
+  flex: 1;
+  margin-left: 15px;
+}
+
+.sd-title {
+  font-size: 1.8rem; /* reduced */
+  color: #080808;
+  margin: 0;
+}
+
+.sd-address,
+.sd-time {
+  font-size: 0.9rem; /* reduced */
+  color: #555;
+  margin: 4px 0;
+}
+
+/* Book Now Button */
+.sd-book-btn {
+  background-color: #cf5af6;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 8px;
+}
+
+.sd-book-btn:hover {
+  background-color: #45a049;
+}
+
+/* Description Section */
+.sd-description {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.sd-description h2 {
+  font-size: 1.3rem; /* reduced */
+  color: #171717;
+  margin-bottom: 10px;
+}
+
+/* Underline for specific headings */
+.sd-description h4 {
+  text-decoration: underline;
+  text-decoration-color: #cf5af6; /* colored underline */
+  text-underline-offset: 4px;
+  font-size: 1.1rem;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+/* Paragraph Styling */
+.sd-description p,
+.sd-description i {
+  font-family: "Georgia", serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Download File Button */
+#dbtn {
+  float: right;
+  background-color: #4cafef;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 8px;
+}
+
+#dbtn:hover {
+  background-color: #3a91d8;
+}
+
+/* Gallery Section */
+.gallery {
+  margin-top: 25px;
+}
+
+ h3 {
+  font-size: 1.3rem;
+  color: #0c0c0c;
+  margin-bottom: 15px;
+  text-decoration: underline;
+  text-decoration-color:  #4cafef; /* colored underline */
+  text-underline-offset: 4px;
+}
+
+.gall-images {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.gall-images img {
+  width: 100%;
+  max-width: 200px; /* smaller images */
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.gall-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sd-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sd-header-info {
+    margin-left: 0;
+    margin-top: 12px;
+  }
+
+  .gall-images {
+    justify-content: center;
+  }
+
+  #dbtn {
+    float: none;
+    display: block;
+    margin: 8px auto;
+  }
+}

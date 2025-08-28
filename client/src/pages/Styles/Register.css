@@ -1,0 +1,131 @@
+/* Section Wrapper */
+.section-registration {
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  padding: 5rem 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Grid Layout */
+.container.grid.grid-two-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Registration Image */
+.registration-image img {
+  max-width: 90%;
+  height: 90%;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Registration Form */
+.registration-form {
+  background-color: #ffffff;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Headings */
+.registration-form h1.main-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+/* Form Labels */
+.registration-form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  color: #333;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+/* Form Inputs */
+.registration-form input {
+  width: 90%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.registration-form input:focus {
+  border-color: #7e57c2;
+  outline: none;
+}
+
+/* Submit Button */
+.btn.btn-submit {
+  background-color: #7e57c2;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.btn.btn-submit:hover {
+  background-color: #5e35b1;
+}
+
+/* ----------------------------- */
+/* 📱 Responsive Design Section */
+/* ----------------------------- */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .registration-form {
+    padding: 2rem 1.5rem;
+  }
+
+  .registration-form h1.main-heading {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .registration-image img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 480px) {
+  .section-registration {
+    padding: 3rem 1rem;
+  }
+
+  .registration-form {
+    padding: 2rem 1rem;
+  }
+
+  .registration-form h1.main-heading {
+    font-size: 1.8rem;
+  }
+
+  .registration-form input {
+    font-size: 0.95rem;
+    padding: 0.65rem 0.9rem;
+  }
+
+  .btn.btn-submit {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+}

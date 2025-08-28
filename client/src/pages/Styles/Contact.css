@@ -1,0 +1,136 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: clamp(14px, 2.2vw, 18px);
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* Layout Tweaks */
+.section-contact {
+  padding: 2.5rem 1rem;
+}
+.container {
+  max-width: 800px; /* reduce container width */
+  margin: 0 auto;
+  padding-inline: 1rem;
+}
+
+/* Grid Layout */
+.grid-two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .grid-two-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Heading */
+.main-heading {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.3rem;
+  color: #4A2C8C;
+  margin-bottom: 1.8rem;
+}
+
+/* Image Section with Hover Effect */
+.contact-img {
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.contact-img img {
+  width: 100%;
+  max-width: 340px; /* slightly smaller image */
+  display: block;
+  transition: transform 0.3s ease-out;
+}
+.contact-img:hover img {
+  transform: scale(1.1); /* zoom effect on hover */
+}
+
+/* Form Section */
+.section-form {
+  background-color: #fff;
+  padding: 1.6rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Form Inputs */
+.section-form form div {
+  margin-bottom: 1.1rem;
+}
+.section-form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+.section-form input,
+.section-form textarea {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Enhanced Textarea Sizing */
+.section-form textarea {
+  min-height: 160px; /* larger textarea */
+  max-height: 240px;
+  resize: vertical;
+}
+.section-form input:focus,
+.section-form textarea:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 3px rgba(108, 99, 255, 0.3);
+  outline: none;
+}
+
+/* Submit Button */
+.section-form button {
+  background-color: #6c63ff;
+  color: #fff;
+  padding: 0.75rem 1.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.section-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(108, 99, 255, 0.35);
+}
+
+/* Map Section */
+.section-contact section.mb-3 iframe {
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 1.8rem;
+}
+
+#select{
+
+   width: 100%;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
