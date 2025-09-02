@@ -9,6 +9,8 @@ const adminRoute =require("./router/admin-router");
 const connectDb=require("./utils/db");
 const errorMiddleware=require ("./middlewares/error-middleware");
 
+
+
 const corsOptions = {
   origin: "http://localhost:5173",
   methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
@@ -16,6 +18,8 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+
+
 
 app.use(express.json()); //middleware
 
@@ -36,6 +40,8 @@ app.use(errorMiddleware);
 // });
 
 const PORT= process.env.PORT || 5000;
+
+
 
 connectDb().then(()=>{
 app.listen(PORT,()=>{
