@@ -13,7 +13,7 @@ export const Login = () => {
   const navigate = useNavigate();
 
   const { storeTokenInLS } = useAuth();
-  const URL = "http://localhost:5000/api/auth/login";
+  const URL = "https://gigswap-hsp-server.onrender.com/api/auth/login";
 
   // let handle the input field value
   const handleInput = (e) => {
