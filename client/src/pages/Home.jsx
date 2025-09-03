@@ -68,15 +68,15 @@ export const Home = () => {
             <div className="btn-group">
               {isLoggedIn ? (
                 <NavLink to="/contact">
-                  <button className="first-btn">connect now</button>
+                  <button className="first-btn">book now</button>
                 </NavLink>
               ) : (
                 <NavLink to="/login">
-                  <button className="first-btn">connect now</button>
+                  <button className="first-btn">book now</button>
                 </NavLink>
               )}
               <a href="/service">
-                <button className="secondary-btn">learn more</button>
+                <button className="secondary-btn">services</button>
               </a>
             </div>
           </div>
