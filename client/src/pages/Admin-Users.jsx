@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../store/auth";
-import "./Styles/Admin.css";
+import "./Styles/Admin-Users.css";
 import {Link} from "react-router-dom"
 
 export const AdminUsers = () => {
