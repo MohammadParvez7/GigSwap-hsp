@@ -51,7 +51,7 @@ export const Contact = () => {
 
     try {
       // The fetch call now sends the new 'time' field along with other form data
-      const response = await fetch("http://localhost:8000/api/form/contact", {
+      const response = await fetch("https://gigswap-hsp-serverr.onrender.com/api/form/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
