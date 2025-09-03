@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Styles/Login.css";
 import { useAuth } from "../store/auth";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 export const Login = () => {
   const [user, setUser] = useState({
@@ -97,6 +98,12 @@ export const Login = () => {
               </div>
             </div>
           </div>
+          <p className="register-link">
+            Didn’t register yet?
+            <Link to="/register" className="link">
+              Register here
+            </Link>
+          </p>
         </main>
       </section>
     </>

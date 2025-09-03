@@ -90,6 +90,37 @@
   transform: scale(1.02);
 }
 
+/* Register link styling */
+.register-link {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.register-link .link {
+  margin-left: 0.3rem;
+  color: #6a1b9a;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.register-link .link:hover {
+  color: #9333ea;
+  text-decoration: underline;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 576px) {
+  .register-link {
+    font-size: 0.85rem;
+  }
+}
+
+
 /* Responsive design */
 @media (max-width: 576px) {
   .section-login {
