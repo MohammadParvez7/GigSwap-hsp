@@ -12,7 +12,7 @@ const errorMiddleware=require ("./middlewares/error-middleware");
 
 
 const corsOptions = {
-  origin: "https://gigswap-hsp-client.onrender.com",
+  origin: "http://localhost:5173",
   methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
   credentials: true,
 };
@@ -39,7 +39,7 @@ app.use(errorMiddleware);
 //   res.status(200).send("Registration");
 // });
 
-const PORT= process.env.PORT || 5000;
+const PORT= process.env.PORT || 8000;
 
 
 
