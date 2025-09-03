@@ -3,7 +3,7 @@ import { FaUser,FaHome,FaRegListAlt } from "react-icons/fa";
 import {FaMessage} from "react-icons/fa6";
 import { useAuth } from "../../store/auth";
 import { Navigate } from "react-router-dom";
-import "./AdminLayout.css";
+import "./Admin-Layout.css";
 
 
 export const AdminLayout=()=>{
