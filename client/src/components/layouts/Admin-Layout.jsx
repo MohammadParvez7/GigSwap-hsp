@@ -4,6 +4,7 @@ import {FaMessage} from "react-icons/fa6";
 import { useAuth } from "../../store/auth";
 import { Navigate } from "react-router-dom";
 
+
 export const AdminLayout=()=>{
  const { user,isLoading } = useAuth();
  console.log("admin layout",user);

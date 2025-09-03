@@ -51,8 +51,8 @@ export const Home = () => {
             <img
               src="/images/h2.jpg"
               alt="coding together"
-              width="400"
-              height="500"
+              width="300"
+              height="300"
             />
           </div>
 

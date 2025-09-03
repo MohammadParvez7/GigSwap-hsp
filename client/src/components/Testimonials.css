@@ -105,9 +105,59 @@
 }
 
 /* Responsive adjustments */
+/* Extra Responsiveness */
+
+/* Tablets (≤1024px) */
+@media (max-width: 1024px) {
+  .testimonials-grid {
+    flex-wrap: wrap;          /* allow wrapping */
+    justify-content: center;
+  }
+
+  .testimonial-card {
+    min-width: 280px;
+    max-width: 320px;
+  }
+}
+
+/* Large Phones (≤768px) */
 @media (max-width: 768px) {
-  .testimonial-client img {
-    width: 50px;
-    height: 50px;
+  .testimonials-heading {
+    font-size: 2rem;
+  }
+
+  .testimonials-grid {
+    flex-direction: column;   /* stack cards vertically */
+    align-items: center;
+  }
+
+  .testimonial-card {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+/* Small Phones (≤480px) */
+@media (max-width: 480px) {
+  .testimonials-section {
+    padding: 2rem 1rem;
+  }
+
+  .testimonials-heading {
+    font-size: 1.8rem;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .testimonial-card p {
+    font-size: 1rem;
+  }
+
+  .testimonial-client h4 {
+    font-size: 1rem;
   }
 }
