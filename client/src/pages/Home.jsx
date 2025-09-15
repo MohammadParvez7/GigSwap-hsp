@@ -31,9 +31,9 @@ export const Home = () => {
                     <button className="first-btn">book now</button>
                   </NavLink>
                 )}
-                <a href="/service">
+                <NavLink to="/service">
                   <button className=" secondary-btn">services</button>
-                </a>
+                </NavLink>
               </div>
             </div>
           </div>
@@ -75,9 +75,9 @@ export const Home = () => {
                   <button className="first-btn">book now</button>
                 </NavLink>
               )}
-              <a href="/service">
-                <button className="secondary-btn">services</button>
-              </a>
+              <NavLink to="/service">
+                <button className=" secondary-btn">services</button>
+              </NavLink>
             </div>
           </div>
         </div>
