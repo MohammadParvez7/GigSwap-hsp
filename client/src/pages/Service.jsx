@@ -40,7 +40,7 @@ export const Service = () => {
 
           <div className="service-card-details">
             <div className="service-card-meta service-grid service-two-cols">
-              <p>GigSwap-Services</p>
+              <p>Servax-Services</p>
               <p>800-2000</p>
             </div>
             <h2 className="service-card-title">Cleaner</h2>
@@ -63,7 +63,7 @@ export const Service = () => {
 
           <div className="service-card-details">
             <div className="service-card-meta service-grid service-two-cols">
-              <p>GigSwap-Services</p>
+              <p>Servax-Services</p>
               <p>400-800</p>
             </div>
             <h2 className="service-card-title">Electrician</h2>
@@ -88,7 +88,7 @@ export const Service = () => {
 
           <div className="service-card-details">
             <div className="service-card-meta service-grid service-two-cols">
-              <p>GigSwap-Services</p>
+              <p>Servax-Services</p>
               <p>500-900</p>
             </div>
             <h2 className="service-card-title">Plumbing </h2>
@@ -113,7 +113,7 @@ export const Service = () => {
 
           <div className="service-card-details">
             <div className="service-card-meta service-grid service-two-cols">
-              <p>GigSwap-Services</p>
+              <p>Servax-Services</p>
               <p>800-2000</p>
             </div>
             <h2 className="service-card-title">Carpentry.</h2>
@@ -138,7 +138,7 @@ export const Service = () => {
 
           <div className="service-card-details">
             <div className="service-card-meta service-grid service-two-cols">
-              <p>GigSwap-Services</p>
+              <p>Servax-Services</p>
               <p>700-1200</p>
             </div>
             <h2 className="service-card-title">Ac-Repair</h2>
@@ -163,7 +163,7 @@ export const Service = () => {
 
           <div className="service-card-details">
             <div className="service-card-meta service-grid service-two-cols">
-              <p>GigSwap-Services</p>
+              <p>Servax-Services</p>
               <p>1000-1500</p>
             </div>
             <h2 className="service-card-title">Pest Control</h2>
