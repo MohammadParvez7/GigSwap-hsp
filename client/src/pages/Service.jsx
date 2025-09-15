@@ -18,7 +18,7 @@ export const Service = () => {
         </NavLink>
       )}
 
-      <a href="https://wa.me/917888223517?text=Hi,GigSwap" target="_blank">
+      <a href="https://wa.me/917888223517?text=Hi,Servax" target="_blank">
         <button className="service-btn whatsapp-service-btn">WhatsApp</button>
       </a>
       <div className="services-container">

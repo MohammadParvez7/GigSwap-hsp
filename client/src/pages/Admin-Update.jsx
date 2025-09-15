@@ -19,7 +19,7 @@ export const AdminUpdate = () => {
   const getSingleUserData = async (id) => {
     try {
       const response = await fetch(
-        ` https://gigswap-hsp-serverr.onrender.com/api/admin/users/${params.id}`,
+        ` https://servax-hsp-server.onrender.com/api/admin/users/${params.id}`,
         {
           method: "GET",
           headers: {
@@ -61,7 +61,7 @@ export const AdminUpdate = () => {
 
     try {
       const response = await fetch(
-        ` https://gigswap-hsp-serverr.onrender.com/api/admin/users/update/${params.id}`,
+        ` https://servax-hsp-server.onrender.com/api/admin/users/update/${params.id}`,
         {
           method: "PATCH",
           headers: {
