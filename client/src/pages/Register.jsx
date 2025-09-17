@@ -1,5 +1,12 @@
 import { useState } from "react";
+// import "./Registration.css";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../store/auth";
+import { toast } from "react-toastify";
 import "./Styles/Register.css";
+
+
+
 
 export const Register = () => {
   const [user, setUser] = useState({
@@ -9,7 +16,14 @@ export const Register = () => {
     password: "",
   });
 
+  const navigate = useNavigate();
+
+  const { storeTokenInLS } = useAuth();
+
+  const URL = "https://servax-hsp-server.onrender.com/api/auth/register";
+
   const handleInput = (e) => {
+    console.log(e);
     let name = e.target.name;
     let value = e.target.value;
 
@@ -19,9 +33,38 @@ export const Register = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  // handle form on submit
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(user);
+
+    try {
+      const response = await fetch(URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify(user),
+      });
+
+      const res_data = await response.json();
+      console.log("res from server", res_data.extraDetails);
+      if (response.ok) {
+        // stored the token in localhost
+
+        storeTokenInLS(res_data.token);
+        setUser({ username: "", email: "", phone: "", password: "" });
+        toast.success("Registration Successful");
+        navigate("/");
+      } else {
+        toast.error(
+          res_data.extraDetails ? res_data.extraDetails : res_data.message
+        );
+      }
+    } catch (error) {
+      console.log("register", error);
+    }
   };
 
   return (
@@ -30,41 +73,37 @@ export const Register = () => {
         <main>
           <div className="section-registration">
             <div className="container grid grid-two-cols">
-              <div className="registration-image">
+              <div className="registration-image reg-img">
                 <img
-                  src="/images/register.png"
-                  alt="registering"
+                  src="/images/h4.jpg"
+                  alt="a nurse with a cute look"
                   width="500"
                   height="500"
                 />
               </div>
+              {/* our main registration code  */}
               <div className="registration-form">
-                <h1 className="main-heading mb-3">Registration Form</h1>
+                <h1 className="main-heading mb-3">registration form</h1>
+                <br />
                 <form onSubmit={handleSubmit}>
                   <div>
                     <label htmlFor="username">username</label>
                     <input
                       type="text"
                       name="username"
-                      id="username"
-                      placeholder="username"
                       value={user.username}
                       onChange={handleInput}
-                      required
-                      autoComplete="off"
+                      placeholder="username"
                     />
                   </div>
                   <div>
                     <label htmlFor="email">email</label>
                     <input
-                      type="email"
+                      type="text"
                       name="email"
-                      id="email"
-                      placeholder="email"
                       value={user.email}
                       onChange={handleInput}
-                      required
-                      autoComplete="off"
+                      placeholder="email"
                     />
                   </div>
                   <div>
@@ -72,12 +111,8 @@ export const Register = () => {
                     <input
                       type="number"
                       name="phone"
-                      id="phone"
-                      placeholder="phone"
                       value={user.phone}
                       onChange={handleInput}
-                      required
-                      autoComplete="off"
                     />
                   </div>
                   <div>
@@ -85,12 +120,9 @@ export const Register = () => {
                     <input
                       type="password"
                       name="password"
-                      id="password"
-                      placeholder="password"
                       value={user.password}
                       onChange={handleInput}
-                      required
-                      autoComplete="off"
+                      placeholder="password"
                     />
                   </div>
                   <br />

@@ -1,5 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Styles/Login.css";
+import { useAuth } from "../store/auth";
+import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 export const Login = () => {
   const [user, setUser] = useState({
@@ -7,6 +11,12 @@ export const Login = () => {
     password: "",
   });
 
+  const navigate = useNavigate();
+
+  const { storeTokenInLS } = useAuth();
+  const URL = "https://servax-hsp-server.onrender.com/api/auth/login";
+
+  // let handle the input field value
   const handleInput = (e) => {
     let name = e.target.name;
     let value = e.target.value;
@@ -17,9 +27,35 @@ export const Login = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(user);
+    try {
+      const response = await fetch(URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      });
+
+      console.log("login form", response);
+
+      const res_data = await response.json();
+      if (response.ok) {
+        storeTokenInLS(res_data.token);
+
+        setUser({ email: "", password: "" });
+        toast.success("Login Successful");
+        navigate("/");
+      } else {
+        toast.error(
+          res_data.extraDetails ? res_data.extraDetails : res_data.message
+        );
+        console.log("invalid credential");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -27,52 +63,47 @@ export const Login = () => {
       <section>
         <main>
           <div className="section-login">
-            <div className="container grid grid-two-cols">
-              <div className="login-image">
-                <img
-                  src="/images/login.png"
-                  alt="login"
-                  width="500"
-                  height="500"
-                />
-              </div>
+            <div className="container2 grid2 grid-two-cols2">
+              {/* our main registration code  */}
               <div className="login-form">
-                <h1 className="main-heading mb-3">Login Form</h1>
+                <h1 className="main-heading mb-3">Login</h1>
+                <br />
                 <form onSubmit={handleSubmit}>
                   <div>
                     <label htmlFor="email">email</label>
                     <input
-                      type="email"
+                      type="text"
                       name="email"
-                      id="email"
-                      placeholder="email"
                       value={user.email}
                       onChange={handleInput}
-                      required
-                      autoComplete="off"
+                      placeholder="email"
                     />
                   </div>
+
                   <div>
                     <label htmlFor="password">password</label>
                     <input
                       type="password"
                       name="password"
-                      id="password"
-                      placeholder="password"
                       value={user.password}
                       onChange={handleInput}
-                      required
-                      autoComplete="off"
+                      placeholder="password"
                     />
                   </div>
                   <br />
                   <button type="submit" className="btn btn-submit">
-                    Login
+                    Login Now
                   </button>
                 </form>
               </div>
             </div>
           </div>
+          <p className="register-link">
+            Didn’t register yet?
+            <Link to="/register" className="link">
+              Register here
+            </Link>
+          </p>
         </main>
       </section>
     </>

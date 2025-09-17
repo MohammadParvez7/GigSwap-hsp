@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { Analytics } from "../components/Analytics";
 import "./Styles/About.css";
 
@@ -5,36 +6,46 @@ export const About = () => {
   return (
     <>
       <main>
-        <section className="section-hero">
-          <div className="container grid grid-two-cols">
-            <div className="hero-content">
-              <p>Welcome to Technical Hub</p>
-              <h1>Why Choose Us?</h1>
+        <section className="about-hero-section">
+          <div className="about-container about-grid about-two-cols">
+            <div className="about-hero-content">
+              {/* <p>We care to cure your Health</p> */}
+              
+              <h1>Why Choose Us? </h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                doloremque eius libero, totam cumque sunt dolores. Ducimus
-                ratione illum, officiis, voluptatibus aperiam, quos molestiae
-                doloremque ab cumque sunt dolores. Ducimus ratione illum,
-                officiis, voluptatibus aperiam, quos molestiae aut.
+                Expertise: Our team consists of experienced IT professionals who
+                are passionate about staying up-to-date with the latest industry
+                trends.
               </p>
-
-              <div className="btn-group">
-                <a href="/contact">
-                  <button className="first-btn">connect now</button>
-                </a>
-                <a href="/service">
-                  <button className="secondary-btn">learn more</button>
-                </a>
+              <p>
+                Customization: We understand that every business is unique.
+                That's why we create solutions that are tailored to your specific
+                needs and goals.
+              </p>
+              <p>
+                Customer-Centric Approach: We prioritize your satisfaction and
+                provide top-notch support to address your IT concerns.
+              </p>
+              <p>
+                Affordability: We offer competitive pricing without compromising
+                on the quality of our services.
+              </p>
+              <p>
+                Reliability: Count on us to be there when you need us. We're
+                committed to ensuring your IT environment is reliable and
+                available 24/7.
+              </p>
+              <div className="about-btn-group">
+                <NavLink to="/contact">
+                  <button className="about-btn">Connect Now</button>
+                </NavLink>
+                <NavLink to="/service">
+                <button className="about-btn-secondary">Learn More</button>
+                </NavLink>
               </div>
+              
             </div>
-            <div className="hero-image">
-              <img
-                src="/images/about.png"
-                alt="coding together"
-                width="400"
-                height="400"
-              />
-            </div>
+          
           </div>
         </section>
       </main>
