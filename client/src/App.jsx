@@ -24,6 +24,11 @@ import PestControl from "./pages/Details/PestControl";
 const App = () => {
   return (
     <>
+      {/* Google Translate widget container added here */}
+      <div id="google_translate_element_container">
+        <div id="google_translate_element"></div>
+      </div>
+      
       <BrowserRouter>
         <Navbar/>
         <Routes>
