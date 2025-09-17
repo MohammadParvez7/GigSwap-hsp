@@ -10,13 +10,13 @@
 
 /* Overall widget ka style */
 .goog-te-gadget {
-  font-family: Arial, sans-serif !important;
-  font-size: 14px !important;
-  color: #333 !important;
-  background-color: #f8f9fa !important;
-  border: 1px solid #ddd !important;
-  border-radius: 8px !important;
-  padding: 5px !important;
+  font-family: Arial, sans-serif ;
+  font-size: 14px ;
+  color: #333 ;
+  background-color: #f8f9fa ;
+  border: 1px solid #ddd ;
+  border-radius: 8px ;
+  padding: 5px ;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -30,9 +30,9 @@
 
 /* Powered by Google Translate ko hide karein */
 .goog-logo-link {
-  display: none !important;
+  display: none ;
 }
 
 .goog-tooltip {
-  display: none !important;
+  display: none;
 }
