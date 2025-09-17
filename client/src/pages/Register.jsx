@@ -1,9 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "../store/auth";
-import { toast } from "react-toastify";
 import "./Styles/Register.css";
-import { useTranslation } from "react-i18next";
 
 export const Register = () => {
   const [user, setUser] = useState({
@@ -13,42 +9,19 @@ export const Register = () => {
     password: "",
   });
 
-  const navigate = useNavigate();
-  const { storeTokenInLS } = useAuth();
-  const { t } = useTranslation();
-
-  const URL = "https://gigswap-hsp-server.onrender.com/api/auth/register";
-
   const handleInput = (e) => {
     let name = e.target.name;
     let value = e.target.value;
+
     setUser({
       ...user,
       [name]: value,
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch(URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(user),
-      });
-
-      const res_data = await response.json();
-      if (response.ok) {
-        storeTokenInLS(res_data.token);
-        setUser({ username: "", email: "", phone: "", password: "" });
-        toast.success(t("register_success_toast"));
-        navigate("/");
-      } else {
-        toast.error(res_data.extraDetails ? res_data.extraDetails : res_data.message);
-      }
-    } catch (error) {
-      console.log("register", error);
-    }
+    console.log(user);
   };
 
   return (
@@ -57,60 +30,72 @@ export const Register = () => {
         <main>
           <div className="section-registration">
             <div className="container grid grid-two-cols">
-              <div className="registration-image reg-img">
+              <div className="registration-image">
                 <img
-                  src="/images/h4.jpg"
-                  alt="a nurse with a cute look"
+                  src="/images/register.png"
+                  alt="registering"
                   width="500"
                   height="500"
                 />
               </div>
               <div className="registration-form">
-                <h1 className="main-heading mb-3">{t("register_form_heading")}</h1>
-                <br />
+                <h1 className="main-heading mb-3">Registration Form</h1>
                 <form onSubmit={handleSubmit}>
                   <div>
-                    <label htmlFor="username">{t("register_username_label")}</label>
+                    <label htmlFor="username">username</label>
                     <input
                       type="text"
                       name="username"
+                      id="username"
+                      placeholder="username"
                       value={user.username}
                       onChange={handleInput}
-                      placeholder={t("register_username_placeholder")}
+                      required
+                      autoComplete="off"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email">{t("register_email_label")}</label>
+                    <label htmlFor="email">email</label>
                     <input
-                      type="text"
+                      type="email"
                       name="email"
+                      id="email"
+                      placeholder="email"
                       value={user.email}
                       onChange={handleInput}
-                      placeholder={t("register_email_placeholder")}
+                      required
+                      autoComplete="off"
                     />
                   </div>
                   <div>
-                    <label htmlFor="phone">{t("register_phone_label")}</label>
+                    <label htmlFor="phone">phone</label>
                     <input
                       type="number"
                       name="phone"
+                      id="phone"
+                      placeholder="phone"
                       value={user.phone}
                       onChange={handleInput}
+                      required
+                      autoComplete="off"
                     />
                   </div>
                   <div>
-                    <label htmlFor="password">{t("register_password_label")}</label>
+                    <label htmlFor="password">password</label>
                     <input
                       type="password"
                       name="password"
+                      id="password"
+                      placeholder="password"
                       value={user.password}
                       onChange={handleInput}
-                      placeholder={t("register_password_placeholder")}
+                      required
+                      autoComplete="off"
                     />
                   </div>
                   <br />
                   <button type="submit" className="btn btn-submit">
-                    {t("register_button")}
+                    Register Now
                   </button>
                 </form>
               </div>
