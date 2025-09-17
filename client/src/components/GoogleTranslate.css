@@ -3,7 +3,7 @@
 /* Widget container ki positioning */
 #google_translate_element_container {
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 20px;
   z-index: 9999;
 }
@@ -12,8 +12,8 @@
 .goog-te-gadget {
   font-family: Arial, sans-serif ;
   font-size: 14px ;
-  color: #333 ;
-  background-color: #f8f9fa ;
+  color: #79e61a ;
+  background-color: #1a84ee ;
   border: 1px solid #ddd ;
   border-radius: 8px ;
   padding: 5px ;
