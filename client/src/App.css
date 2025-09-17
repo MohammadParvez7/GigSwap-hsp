@@ -42,24 +42,5 @@
 }
 
 
-/* src/App.css */
 
-/* Google Translate Widget ka CSS */
-#google_translate_element_container {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 9999;
-}
 
-/* Optional: Default widget style ko adjust karne ke liye */
-.goog-te-gadget {
-  font-family: Arial, sans-serif !important;
-}
-
-.goog-te-gadget .goog-te-combo {
-  border: 1px solid #ccc !important;
-  border-radius: 5px !important;
-  padding: 5px 8px !important;
-  color: #333 !important;
-}
