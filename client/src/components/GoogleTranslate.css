@@ -3,54 +3,54 @@
 /* Desktop aur bade screens ke liye styling (default) */
 #google_translate_element_container {
   position: absolute;
-  top: 80px;
-  left: 20px; /* Right se left kiya gaya hai */
+  top: 90px; /* Upar se aur neeche kiya gaya */
+  left: 20px;
   z-index: 9999;
 }
 
 .goog-te-gadget {
-  font-family: 'Segoe UI', Arial, sans-serif !important;
-  font-size: 14px !important;
-  color: #ecf0f1 !important;
-  background-color: #34495e !important;
-  border: 1px solid #2c3e50 !important;
-  border-radius: 8px !important;
-  padding: 4px !important;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 12px; /* Font size kam kiya gaya */
+  color: #ecf0f1;
+  background-color: #34495e;
+  border: 1px solid #2c3e50;
+  border-radius: 8px;
+  padding: 3px; /* Padding kam kiya gaya */
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .goog-te-gadget .goog-te-combo {
-  border: none !important;
-  background-color: #34495e !important;
-  color: #ecf0f1 !important;
-  padding: 4px 8px !important;
+  border: none;
+  background-color: #34495e;
+  color: #ecf0f1;
+  padding: 3px 6px; /* Padding kam kiya gaya */
 }
 
 .goog-te-gadget .goog-te-combo:hover {
-  background-color: #2c3e50 !important;
+  background-color: #2c3e50;
 }
 
 .goog-te-gadget .goog-logo-link {
-  display: none !important;
+  display: none;
 }
 
 .goog-te-gadget .goog-tooltip {
-  display: none !important;
+  display: none;
 }
 
 /* Mobile screens ke liye media query */
 @media screen and (max-width: 600px) {
   #google_translate_element_container {
-    top: 60px; /* Top margin kam kiya gaya */
-    left: 10px; /* Right se left kiya gaya hai */
+    top: 70px; /* Mobile ke liye top margin kam kiya gaya */
+    left: 10px;
   }
 
   .goog-te-gadget {
-    font-size: 12px !important; /* Font size chota kiya gaya */
-    padding: 3px !important; /* Padding kam kiya gaya */
+    font-size: 10px; /* Mobile ke liye font size aur bhi kam kiya gaya */
+    padding: 2px;
   }
 
   .goog-te-gadget .goog-te-combo {
-    padding: 3px 6px !important; /* Dropdown padding kam kiya gaya */
+    padding: 2px 4px;
   }
 }
