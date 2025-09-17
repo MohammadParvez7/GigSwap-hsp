@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { AuthProvider } from './store/auth.jsx'
-  import { ToastContainer} from 'react-toastify';
+import { ToastContainer} from 'react-toastify';
+import './i18n';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   
