@@ -20,7 +20,7 @@ import Plumbing from "./pages/Details/Plumbing";
 import Carpentry from "./pages/Details/Carpentry";
 import Acrepair from "./pages/Details/Acrepair";
 import PestControl from "./pages/Details/PestControl";
-import './App.css';
+
 
 
 const App = () => {
