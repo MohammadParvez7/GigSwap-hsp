@@ -38,9 +38,9 @@ export const Home = () => {
         </section>
       </main>
 
-      {/* Analytics and Testimonials sections are optional, can be re-added if needed */}
-      {/* <Analytics />
-      <Testimonials /> */}
+      
+       <Analytics />
+      <Testimonials /> 
     </>
   );
 };
