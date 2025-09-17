@@ -4,7 +4,7 @@
 #google_translate_element_container {
   position: absolute;
   top: 80px;
-  right: 20px;
+  left: 20px; /* Right se left kiya gaya hai */
   z-index: 9999;
 }
 
@@ -42,7 +42,7 @@
 @media screen and (max-width: 600px) {
   #google_translate_element_container {
     top: 60px; /* Top margin kam kiya gaya */
-    right: 10px; /* Right margin kam kiya gaya */
+    left: 10px; /* Right se left kiya gaya hai */
   }
 
   .goog-te-gadget {
