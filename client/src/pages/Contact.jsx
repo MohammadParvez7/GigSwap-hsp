@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import "./Styles/Contact.css";
 import { useAuth } from "../store/auth";
 import { toast } from "react-toastify";
+import { useTranslation } from "react-i18next";
 
-// Added 'time' to the default form data
 const defaultContactFormData = {
   username: "",
   email: "",
@@ -16,10 +16,9 @@ const defaultContactFormData = {
 export const Contact = () => {
   const [contact, setContact] = useState(defaultContactFormData);
   const [userData, setUserData] = useState(true);
-
   const { user } = useAuth();
+  const { t } = useTranslation();
 
-  // Use useEffect to prevent the state update loop
   useEffect(() => {
     if (userData && user) {
       setContact({
@@ -28,34 +27,27 @@ export const Contact = () => {
         message: "",
         address: "",
         date: "",
-        time: "", // Initialize the new 'time' field
+        time: "",
       });
       setUserData(false);
     }
   }, [userData, user]);
 
-  // handleInput remains the same as it correctly handles all input fields
   const handleInput = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-
     setContact({
       ...contact,
       [name]: value,
     });
   };
 
-  // handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      // The fetch call now sends the new 'time' field along with other form data
       const response = await fetch("https://gigswap-hsp-server.onrender.com/api/form/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(contact),
       });
 
@@ -63,12 +55,12 @@ export const Contact = () => {
         setContact(defaultContactFormData);
         const data = await response.json();
         console.log(data);
-        toast.success("Service Booked Successfully. A confirmation email has been sent.");
+        toast.success(t("contact_success_toast"));
       } else {
-        toast.error("Failed to book service.");
+        toast.error(t("contact_failure_toast"));
       }
     } catch (error) {
-      toast.error("Invalid Credentials or network error.");
+      toast.error(t("contact_error_toast"));
       console.log("Error during form submission:", error);
     }
   };
@@ -77,19 +69,17 @@ export const Contact = () => {
     <>
       <section className="section-contact">
         <div className="contact-content container">
-          <h1 className="main-heading">Book Your Service</h1>
+          <h1 className="main-heading">{t("contact_heading")}</h1>
         </div>
-        {/* contact page main  */}
         <div className="container grid grid-two-cols">
           <div className="contact-img">
             <img src="/images/support.png" alt="we are always ready to help" />
           </div>
 
-          {/* contact form content actual  */}
           <section className="section-form">
             <form onSubmit={handleSubmit}>
               <div>
-                <label htmlFor="username">username</label>
+                <label htmlFor="username">{t("contact_username_label")}</label>
                 <input
                   type="text"
                   name="username"
@@ -102,7 +92,7 @@ export const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="email">email</label>
+                <label htmlFor="email">{t("contact_email_label")}</label>
                 <input
                   type="email"
                   name="email"
@@ -115,7 +105,7 @@ export const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message">Services</label>
+                <label htmlFor="message">{t("contact_services_label")}</label>
                 <select
                   name="message"
                   id="select"
@@ -123,19 +113,18 @@ export const Contact = () => {
                   value={contact.message}
                   onChange={handleInput}
                 >
-                  <option>Select</option>
-                  <option>Electrician</option>
-                  <option>Plumbing</option>
-                  <option> Ac-Repair </option>
-                  <option> Cleaner </option>
-                  <option> Carpenter </option>
-                  <option> Pest Control </option>
+                  <option>{t("contact_select_option")}</option>
+                  <option>{t("service_title_electrician")}</option>
+                  <option>{t("service_title_plumbing")}</option>
+                  <option>{t("service_title_acrepair")}</option>
+                  <option>{t("service_title_cleaner")}</option>
+                  <option>{t("service_title_carpentry")}</option>
+                  <option>{t("service_title_pestcontrol")}</option>
                 </select>
               </div>
-              
-              {/* Added the new time input field */}
+
               <div>
-                <label htmlFor="date">Date</label>
+                <label htmlFor="date">{t("contact_date_label")}</label>
                 <input
                   type="date"
                   name="date"
@@ -144,10 +133,9 @@ export const Contact = () => {
                   required
                 />
               </div>
-              
-              {/* Added the new time input field */}
+
               <div>
-                <label htmlFor="time">Time</label>
+                <label htmlFor="time">{t("contact_time_label")}</label>
                 <input
                   type="time"
                   name="time"
@@ -159,7 +147,7 @@ export const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="address">Address</label>
+                <label htmlFor="address">{t("contact_address_label")}</label>
                 <input
                   type="text"
                   name="address"
@@ -173,7 +161,7 @@ export const Contact = () => {
 
               <div></div>
               <div>
-                <button type="submit">Book</button>
+                <button type="submit">{t("contact_book_button")}</button>
               </div>
             </form>
           </section>

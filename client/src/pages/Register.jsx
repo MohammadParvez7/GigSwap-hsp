@@ -1,12 +1,9 @@
 import { useState } from "react";
-// import "./Registration.css";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../store/auth";
 import { toast } from "react-toastify";
 import "./Styles/Register.css";
-
-
-
+import { useTranslation } from "react-i18next";
 
 export const Register = () => {
   const [user, setUser] = useState({
@@ -17,50 +14,37 @@ export const Register = () => {
   });
 
   const navigate = useNavigate();
-
   const { storeTokenInLS } = useAuth();
+  const { t } = useTranslation();
 
   const URL = "https://gigswap-hsp-server.onrender.com/api/auth/register";
 
   const handleInput = (e) => {
-    console.log(e);
     let name = e.target.name;
     let value = e.target.value;
-
     setUser({
       ...user,
       [name]: value,
     });
   };
 
-  // handle form on submit
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(user);
-
     try {
       const response = await fetch(URL, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(user),
       });
 
       const res_data = await response.json();
-      console.log("res from server", res_data.extraDetails);
       if (response.ok) {
-        // stored the token in localhost
-
         storeTokenInLS(res_data.token);
         setUser({ username: "", email: "", phone: "", password: "" });
-        toast.success("Registration Successful");
+        toast.success(t("register_success_toast"));
         navigate("/");
       } else {
-        toast.error(
-          res_data.extraDetails ? res_data.extraDetails : res_data.message
-        );
+        toast.error(res_data.extraDetails ? res_data.extraDetails : res_data.message);
       }
     } catch (error) {
       console.log("register", error);
@@ -81,33 +65,32 @@ export const Register = () => {
                   height="500"
                 />
               </div>
-              {/* our main registration code  */}
               <div className="registration-form">
-                <h1 className="main-heading mb-3">registration form</h1>
+                <h1 className="main-heading mb-3">{t("register_form_heading")}</h1>
                 <br />
                 <form onSubmit={handleSubmit}>
                   <div>
-                    <label htmlFor="username">username</label>
+                    <label htmlFor="username">{t("register_username_label")}</label>
                     <input
                       type="text"
                       name="username"
                       value={user.username}
                       onChange={handleInput}
-                      placeholder="username"
+                      placeholder={t("register_username_placeholder")}
                     />
                   </div>
                   <div>
-                    <label htmlFor="email">email</label>
+                    <label htmlFor="email">{t("register_email_label")}</label>
                     <input
                       type="text"
                       name="email"
                       value={user.email}
                       onChange={handleInput}
-                      placeholder="email"
+                      placeholder={t("register_email_placeholder")}
                     />
                   </div>
                   <div>
-                    <label htmlFor="phone">phone</label>
+                    <label htmlFor="phone">{t("register_phone_label")}</label>
                     <input
                       type="number"
                       name="phone"
@@ -116,18 +99,18 @@ export const Register = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="password">password</label>
+                    <label htmlFor="password">{t("register_password_label")}</label>
                     <input
                       type="password"
                       name="password"
                       value={user.password}
                       onChange={handleInput}
-                      placeholder="password"
+                      placeholder={t("register_password_placeholder")}
                     />
                   </div>
                   <br />
                   <button type="submit" className="btn btn-submit">
-                    Register Now
+                    {t("register_button")}
                   </button>
                 </form>
               </div>

@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./Styles/Login.css";
 import { useAuth } from "../store/auth";
 import { toast } from "react-toastify";
-import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export const Login = () => {
   const [user, setUser] = useState({
@@ -12,19 +12,15 @@ export const Login = () => {
   });
 
   const navigate = useNavigate();
-
   const { storeTokenInLS } = useAuth();
+  const { t } = useTranslation();
+
   const URL = "https://gigswap-hsp-server.onrender.com/api/auth/login";
 
-  // let handle the input field value
   const handleInput = (e) => {
     let name = e.target.name;
     let value = e.target.value;
-
-    setUser({
-      ...user,
-      [name]: value,
-    });
+    setUser({ ...user, [name]: value });
   };
 
   const handleSubmit = async (e) => {
@@ -32,25 +28,18 @@ export const Login = () => {
     try {
       const response = await fetch(URL, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(user),
       });
-
-      console.log("login form", response);
 
       const res_data = await response.json();
       if (response.ok) {
         storeTokenInLS(res_data.token);
-
         setUser({ email: "", password: "" });
-        toast.success("Login Successful");
+        toast.success(t("login_success_toast"));
         navigate("/");
       } else {
-        toast.error(
-          res_data.extraDetails ? res_data.extraDetails : res_data.message
-        );
+        toast.error(res_data.extraDetails ? res_data.extraDetails : res_data.message);
         console.log("invalid credential");
       }
     } catch (error) {
@@ -64,44 +53,42 @@ export const Login = () => {
         <main>
           <div className="section-login">
             <div className="container2 grid2 grid-two-cols2">
-              {/* our main registration code  */}
               <div className="login-form">
-                <h1 className="main-heading mb-3">Login</h1>
+                <h1 className="main-heading mb-3">{t("login_heading")}</h1>
                 <br />
                 <form onSubmit={handleSubmit}>
                   <div>
-                    <label htmlFor="email">email</label>
+                    <label htmlFor="email">{t("login_email_label")}</label>
                     <input
                       type="text"
                       name="email"
                       value={user.email}
                       onChange={handleInput}
-                      placeholder="email"
+                      placeholder={t("login_email_placeholder")}
                     />
                   </div>
-
                   <div>
-                    <label htmlFor="password">password</label>
+                    <label htmlFor="password">{t("login_password_label")}</label>
                     <input
                       type="password"
                       name="password"
                       value={user.password}
                       onChange={handleInput}
-                      placeholder="password"
+                      placeholder={t("login_password_placeholder")}
                     />
                   </div>
                   <br />
                   <button type="submit" className="btn btn-submit">
-                    Login Now
+                    {t("login_button")}
                   </button>
                 </form>
               </div>
             </div>
           </div>
           <p className="register-link">
-            Didn’t register yet?
+            {t("login_no_account_text")}
             <Link to="/register" className="link">
-              Register here
+              {t("login_register_here_link")}
             </Link>
           </p>
         </main>
