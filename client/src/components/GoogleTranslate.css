@@ -12,23 +12,28 @@
   font-family: 'Segoe UI', Arial, sans-serif;
   font-size: 10px; /* Font size aur kam kiya gaya hai */
   color: #ecf0f1;
-  background-color: #34495e;
-  border: 1px solid #2c3e50;
+  background-color: 
+rgba(110, 80, 151);
+  border: 1px solid 
+rgba(110, 80, 151);
   border-radius: 8px;
   padding: 2px; /* Padding aur kam kiya gaya hai */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px 
+rgba(110, 80, 151);
   max-width: 150px; /* Max width set ki gayi hai */
 }
 
 .goog-te-gadget .goog-te-combo {
   border: none;
-  background-color: #34495e;
+  background-color:
+rgba(110, 80, 151);
   color: #ecf0f1;
   padding: 2px 4px; /* Padding aur kam kiya gaya hai */
 }
 
 .goog-te-gadget .goog-te-combo:hover {
-  background-color: #2c3e50;
+  background-color: 
+rgba(110, 80, 151);
 }
 
 .goog-te-gadget .goog-logo-link {
