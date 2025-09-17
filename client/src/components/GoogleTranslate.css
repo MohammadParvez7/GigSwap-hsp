@@ -3,27 +3,28 @@
 /* Desktop aur bade screens ke liye styling (default) */
 #google_translate_element_container {
   position: absolute;
-  top: 90px; /* Upar se aur neeche kiya gaya */
+  top: 120px;
   left: 20px;
   z-index: 9999;
 }
 
 .goog-te-gadget {
   font-family: 'Segoe UI', Arial, sans-serif;
-  font-size: 12px; /* Font size kam kiya gaya */
+  font-size: 10px; /* Font size aur kam kiya gaya hai */
   color: #ecf0f1;
   background-color: #34495e;
   border: 1px solid #2c3e50;
   border-radius: 8px;
-  padding: 3px; /* Padding kam kiya gaya */
+  padding: 2px; /* Padding aur kam kiya gaya hai */
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  max-width: 150px; /* Max width set ki gayi hai */
 }
 
 .goog-te-gadget .goog-te-combo {
   border: none;
   background-color: #34495e;
   color: #ecf0f1;
-  padding: 3px 6px; /* Padding kam kiya gaya */
+  padding: 2px 4px; /* Padding aur kam kiya gaya hai */
 }
 
 .goog-te-gadget .goog-te-combo:hover {
@@ -41,16 +42,17 @@
 /* Mobile screens ke liye media query */
 @media screen and (max-width: 600px) {
   #google_translate_element_container {
-    top: 70px; /* Mobile ke liye top margin kam kiya gaya */
+    top: 90px;
     left: 10px;
   }
 
   .goog-te-gadget {
-    font-size: 10px; /* Mobile ke liye font size aur bhi kam kiya gaya */
-    padding: 2px;
+    font-size: 8px; /* Mobile font size aur kam kiya gaya hai */
+    padding: 1px;
+    max-width: 100px; /* Mobile ke liye max width kam ki gayi hai */
   }
 
   .goog-te-gadget .goog-te-combo {
-    padding: 2px 4px;
+    padding: 1px 2px;
   }
 }
