@@ -4,7 +4,7 @@
 
 .section-hero {
   position: relative;
-  background: url("/images/home7.jpg") center/cover no-repeat;
+  background: url("/images/home7.png") center/cover no-repeat;
   height: 80vh;
   display: flex;
   align-items: center;
