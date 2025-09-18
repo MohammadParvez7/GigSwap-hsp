@@ -95,7 +95,7 @@
 
 /* Hover effect for Primary */
 .first-btn:hover {
-  background-color: #7040e9;
+  background-color: #3c13a3;
   transform: translateY(-2px);
   box-shadow: 0 6px 10px rgba(0, 123, 255, 0.2);
 }
