@@ -20,7 +20,7 @@ export const About = () => {
               <p>
                 Customization: We understand that every business is unique.
                 That's why we create solutions that are tailored to your specific
-                needs and goals..
+                needs and goals.
               </p>
               <p>
                 Customer-Centric Approach: We prioritize your satisfaction and
