@@ -109,7 +109,7 @@
 
 /* Hover effect for Secondary */
 .secondary-btn:hover {
-  background-color: #577cec;
+  background-color: #4973f0;
   color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 6px 10px rgba(0, 123, 255, 0.2);
