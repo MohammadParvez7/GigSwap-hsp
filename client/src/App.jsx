@@ -28,7 +28,7 @@ const App = () => {
     <>
      
       <div className="app-container">
-        <GoogleTranslate />
+        {/* <GoogleTranslate /> */}
       <BrowserRouter>
         <Navbar/>
         <Routes>
