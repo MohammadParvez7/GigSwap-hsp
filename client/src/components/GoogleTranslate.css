@@ -4,11 +4,11 @@
 #google_translate_element_container {
   /* Position the container relative to the viewport */
   position: fixed;
-  
+
   /* Adjust this value to place the buttons higher, e.g., 20px from the top */
-  top: 80px; 
+  top: 80px;
   left: 20px;
-  
+
   z-index: 9999;
   display: flex; /* Arrange buttons in a horizontal line */
   align-items: center; /* Align items vertically */
@@ -38,21 +38,29 @@
 }
 
 /* Hide Google Translate's logo and tooltip */
-.goog-logo-link, .goog-te-gadget .goog-tooltip, .goog-te-gadget {
+.goog-logo-link,
+.goog-te-gadget .goog-tooltip,
+.goog-te-gadget {
   display: none !important;
 }
 
-/* Mobile screens */
+/* --- */
+
+/* ## Mobile Screens */
+
 @media screen and (max-width: 600px) {
   #google_translate_element_container {
-    /* Stack buttons vertically on mobile */
-    flex-direction: column; 
-    align-items: flex-start; /* Align buttons to the left */
-    top: 15px;
+    /* Stacks buttons vertically on mobile */
+    flex-direction: column;
+    align-items: flex-start; /* Aligns buttons to the left */
+
+    /* Moves the buttons to the bottom of the screen */
+    top: auto;
+    bottom: 15px;
     left: 10px;
     gap: 5px; /* Reduce space between buttons on mobile */
   }
-  
+
   #google_translate_element_container button {
     padding: 6px 10px;
     font-size: 12px;
