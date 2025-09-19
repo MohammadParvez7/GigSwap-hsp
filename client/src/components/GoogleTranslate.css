@@ -6,7 +6,7 @@
   position: fixed;
 
   /* Adjust this value to place the buttons higher, e.g., 20px from the top */
-  top: 80px;
+  top: 100px;
   left: 20px;
 
   z-index: 9999;
