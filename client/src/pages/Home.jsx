@@ -3,6 +3,7 @@ import "./Styles/Home.css";
 import { Testimonials } from "../components/Testimonials";
 import { useAuth } from "../store/auth";
 import { NavLink } from "react-router-dom";
+import { GoogleTranslate } from "../components/GoogleTranslate";
 
 export const Home = () => {
   const { isLoggedIn } = useAuth();
@@ -12,6 +13,7 @@ export const Home = () => {
         <section className="section-hero">
           <div className="container grid grid-two-cols">
             <div className="hero-content">
+              <GoogleTranslate/>
               <p>A Home Service Provider</p>
               <h1>Welcome to GigSwap</h1>
               <p>
