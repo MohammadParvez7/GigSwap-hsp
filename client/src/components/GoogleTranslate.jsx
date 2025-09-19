@@ -40,7 +40,7 @@ export const GoogleTranslate = () => {
       <div id="google_translate_element"></div>
       
   
-      <div>
+      <div id="buttons">
         <button onClick={() => changeLanguage('en')}>English</button>
         <button onClick={() => changeLanguage('mr')}>मराठी</button>
         <button onClick={() => changeLanguage('hi')}>हिंदी </button>

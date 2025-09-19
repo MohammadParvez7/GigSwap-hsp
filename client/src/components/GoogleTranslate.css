@@ -49,6 +49,13 @@
 /* ## Mobile Screens */
 
 @media screen and (max-width: 600px) {
+
+  #buttons{
+
+     flex-direction: column;
+     gap: 4px;
+  }
+
   #google_translate_element_container {
     /* Stacks buttons vertically on mobile */
     flex-direction: column;
