@@ -1,22 +1,23 @@
 /* src/components/Styles/GoogleTranslate.css */
 
-/* Desktop and larger screens */
+/* Desktop and larger screens (default) */
 #google_translate_element_container {
   /* Position the container relative to the viewport */
-  position: absolute;
+  position: fixed;
   
-  /* You will need to adjust this value based on your actual navbar's height */
-  top: 150px; 
+  /* Adjust this value to place the buttons higher, e.g., 20px from the top */
+  top: 20px; 
   left: 20px;
   
   z-index: 9999;
-  display: flex; /* Use flexbox for button alignment */
+  display: flex; /* Arrange buttons in a horizontal line */
+  align-items: center; /* Align items vertically */
   gap: 10px; /* Space between buttons */
-  
-  /* Hide the Google Translate dropdown element */
-  #google_translate_element {
-    display: none;
-  }
+}
+
+/* Hide the Google Translate dropdown element */
+#google_translate_element {
+  display: none;
 }
 
 /* Style for the language buttons */
@@ -36,24 +37,25 @@
   background-color: rgba(85, 60, 125); /* Darker shade on hover */
 }
 
-/* Hide the Google Translate branding (optional but good practice) */
-.goog-logo-link, .goog-te-gadget .goog-tooltip {
-  display: none !important;
-}
-.goog-te-gadget {
+/* Hide Google Translate's logo and tooltip */
+.goog-logo-link, .goog-te-gadget .goog-tooltip, .goog-te-gadget {
   display: none !important;
 }
 
 /* Mobile screens */
 @media screen and (max-width: 600px) {
   #google_translate_element_container {
-    top: 100px;
+    /* Stack buttons vertically on mobile */
+    flex-direction: column; 
+    align-items: flex-start; /* Align buttons to the left */
+    top: 10px;
     left: 10px;
-    gap: 5px; /* Reduce gap on mobile */
+    gap: 5px; /* Reduce space between buttons on mobile */
   }
   
   #google_translate_element_container button {
     padding: 6px 10px;
     font-size: 12px;
+    width: auto; /* Allow buttons to take up their natural width */
   }
 }

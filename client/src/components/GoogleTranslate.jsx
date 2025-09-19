@@ -47,8 +47,9 @@ export const GoogleTranslate = () => {
       {/* These are the new buttons that replace the dropdown. */}
       <div>
         <button onClick={() => changeLanguage('en')}>English</button>
-        <button onClick={() => changeLanguage('mr')}>Marathi</button>
-        <button onClick={() => changeLanguage('hi')}>Hindi</button>
+        <button onClick={() => changeLanguage('mr')}>मराठी</button>
+        <button onClick={() => changeLanguage('hi')}>हिंदी </button>
+        <button onClick={() => changeLanguage('ur')}>اردو</button>
       </div>
     </div>
   );
