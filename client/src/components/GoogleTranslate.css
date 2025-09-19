@@ -6,13 +6,13 @@
   position: fixed;
   
   /* Adjust this value to place the buttons higher, e.g., 20px from the top */
-  top: 50px; 
+  top: 80px; 
   left: 20px;
   
   z-index: 9999;
   display: flex; /* Arrange buttons in a horizontal line */
   align-items: center; /* Align items vertically */
-  gap: 10px; /* Space between buttons */
+  gap: 13px; /* Space between buttons */
 }
 
 /* Hide the Google Translate dropdown element */
@@ -22,19 +22,19 @@
 
 /* Style for the language buttons */
 #google_translate_element_container button {
-  background-color: rgb(149, 106, 208);
+  background-color: rgb(108, 80, 147);
   color: #ecf0f1;
   border: 1px solid rgb(234, 233, 235);
   border-radius: 8px;
-  padding: 8px 12px;
-  font-size: 14px;
+  padding: 6px 10px;
+  font-size: 12px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   white-space: nowrap; /* Prevents text from wrapping */
 }
 
 #google_translate_element_container button:hover {
-  background-color: rgba(85, 60, 125); /* Darker shade on hover */
+  background-color: rgb(56, 92, 236); /* Darker shade on hover */
 }
 
 /* Hide Google Translate's logo and tooltip */
