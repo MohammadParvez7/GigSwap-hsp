@@ -3,7 +3,7 @@
 /* Desktop and larger screens (default) */
 #google_translate_element_container {
   /* Position the container relative to the viewport */
-  position: sticky;
+  position: fixed;
 
   /* Adjust this value to place the buttons higher, e.g., 20px from the top */
   top: 120px;
