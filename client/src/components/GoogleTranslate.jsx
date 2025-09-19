@@ -1,12 +1,9 @@
-// src/components/GoogleTranslate.jsx
-
 import React, { useEffect } from 'react';
 import './GoogleTranslate.css';
 
 export const GoogleTranslate = () => {
 
-  // This function is still necessary to load the Google Translate script,
-  // even if we hide the element it creates.
+
   const googleTranslateElementInit = () => {
     new window.google.translate.TranslateElement({
       pageLanguage: 'en'
@@ -14,8 +11,6 @@ export const GoogleTranslate = () => {
   };
 
   const changeLanguage = (lang) => {
-    // The logic to find the select element remains the same.
-    // It's a hidden element we're now just using for functionality.
     const select = document.querySelector('.goog-te-combo');
     if (select) {
       select.value = lang;
@@ -44,7 +39,7 @@ export const GoogleTranslate = () => {
       */}
       <div id="google_translate_element"></div>
       
-      {/* These are the new buttons that replace the dropdown. */}
+  
       <div>
         <button onClick={() => changeLanguage('en')}>English</button>
         <button onClick={() => changeLanguage('mr')}>मराठी</button>
