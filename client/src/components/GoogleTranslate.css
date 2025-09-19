@@ -56,8 +56,8 @@
     align-items: flex-start; /* Aligns buttons to the left */
 
     /* Moves the buttons to the bottom of the screen */
-    top: 70px;
-    bottom: 50px; /* Adjust this value to raise or lower the buttons */
+    top: 90px;
+    bottom: 20px; /* Adjust this value to raise or lower the buttons */
     left: 10px;
     gap: 5px; /* Reduce space between buttons on mobile */
   }
