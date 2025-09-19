@@ -2,38 +2,39 @@
 
 /* Desktop aur bade screens ke liye styling (default) */
 #google_translate_element_container {
-  position: absolute;
-  top: 120px;
-  left: 20px;
+  /* position: absolute; */
+  /* top: 120px; */
+  /* left: 20px; */
   z-index: 9999;
+  display: flex; /* Use flexbox to arrange items horizontally */
+  align-items: center; /* Align items vertically in the center */
+  gap: 10px; /* Add some space between the dropdown and buttons */
+  position: fixed; /* Use fixed position to keep it in view */
+  top: 20px;
+  left: 20px;
 }
 
 .goog-te-gadget {
   font-family: 'Segoe UI', Arial, sans-serif;
   font-size: 10px; /* Font size aur kam kiya gaya hai */
   color: #ecf0f1;
-  background-color: 
-rgba(110, 80, 151);
-  border: 1px solid 
-rgba(110, 80, 151);
+  background-color: rgba(110, 80, 151);
+  border: 1px solid rgba(110, 80, 151);
   border-radius: 8px;
   padding: 2px; /* Padding aur kam kiya gaya hai */
-  box-shadow: 0 4px 10px 
-rgba(110, 80, 151);
+  box-shadow: 0 4px 10px rgba(110, 80, 151);
   max-width: 150px; /* Max width set ki gayi hai */
 }
 
 .goog-te-gadget .goog-te-combo {
   border: none;
-  background-color:
-rgba(110, 80, 151);
+  background-color: rgba(110, 80, 151);
   color: #ecf0f1;
   padding: 2px 4px; /* Padding aur kam kiya gaya hai */
 }
 
 .goog-te-gadget .goog-te-combo:hover {
-  background-color: 
-rgba(110, 80, 151);
+  background-color: rgba(110, 80, 151);
 }
 
 .goog-te-gadget .goog-logo-link {
@@ -44,11 +45,30 @@ rgba(110, 80, 151);
   display: none;
 }
 
+/* New CSS for the language buttons */
+#google_translate_element_container button {
+  background-color: rgba(110, 80, 151);
+  color: #ecf0f1;
+  border: 1px solid rgba(110, 80, 151);
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#google_translate_element_container button:hover {
+  background-color: rgba(85, 60, 125); /* Darker shade on hover */
+}
+
 /* Mobile screens ke liye media query */
 @media screen and (max-width: 600px) {
   #google_translate_element_container {
-    top: 90px;
+    top: 10px;
     left: 10px;
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: flex-start; /* Align items to the left */
+    gap: 5px; /* Reduce gap on mobile */
   }
 
   .goog-te-gadget {
