@@ -51,20 +51,8 @@
 @media screen and (max-width: 600px) {
 
   #google_translate_element_container {
-    /* Stacks buttons vertically on mobile */
-    flex-direction: column;
-    align-items: flex-start; /* Aligns buttons to the left */
-
-    /* Moves the buttons to the bottom of the screen */
-    top: 110px;
-    bottom: 20px; /* Adjust this value to raise or lower the buttons */
-    left: 10px;
-    gap: 5px; /* Reduce space between buttons on mobile */
+   display: none;
   }
 
-  #google_translate_element_container button {
-    padding: 6px 10px;
-    font-size: 12px;
-    width: auto; /* Allow buttons to take up their natural width */
-  }
+ 
 }
