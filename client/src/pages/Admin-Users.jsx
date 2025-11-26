@@ -10,7 +10,7 @@ export const AdminUsers = () => {
 
   const getAllUsersData = async () => {
     try {
-      const response = await fetch(" https://gigswap-hsp-server.onrender.com/api/admin/users", {
+      const response = await fetch(" http://localhost:5000/api/admin/users", {
         method: "GET",
         headers: {
           Authorization: authorizationToken,
@@ -29,7 +29,7 @@ export const AdminUsers = () => {
   const deleteUser = async (id) => {
     try {
       const response = await fetch(
-        ` https://gigswap-hsp-server.onrender.com/api/admin/users/delete/${id}`,
+        ` http://localhost:5000/api/admin/users/delete/${id}`,
         {
           method: "DELETE",
           headers: {

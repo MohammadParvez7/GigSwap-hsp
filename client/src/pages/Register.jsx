@@ -20,7 +20,7 @@ export const Register = () => {
 
   const { storeTokenInLS } = useAuth();
 
-  const URL = "https://gigswap-hsp-server.onrender.com/api/auth/register";
+  const URL = "http://localhost:5000/api/auth/register";
 
   const handleInput = (e) => {
     console.log(e);
