@@ -6,7 +6,7 @@ export const Testimonials = () => {
         <h2 className="testimonials-heading">What Our Clients Say</h2>
         <div className="testimonials-grid">
           <div className="testimonial-card">
-            <p>"Servax made finding reliable help so easy! Quick, friendly, and efficient service every time."</p>
+            <p>"Servax made finding reliable help so easy Quick, friendly, and efficient service every time."</p>
             <div className="testimonial-client">
               <img src="/images/women.jpg" alt="Ayesha Khan" />
               <h4>- Mahek Naaz</h4>
