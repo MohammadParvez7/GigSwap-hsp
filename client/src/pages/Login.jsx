@@ -14,7 +14,7 @@ export const Login = () => {
   const navigate = useNavigate();
 
   const { storeTokenInLS } = useAuth();
-  const URL = "https://servax-hsp-server.onrender.com/api/auth/login";
+  const URL = "https://servax-hsp-backend.vercel.app/api/auth/login";
 
   // let handle the input field value
   const handleInput = (e) => {

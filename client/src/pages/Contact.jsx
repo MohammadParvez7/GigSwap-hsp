@@ -51,7 +51,7 @@ export const Contact = () => {
 
     try {
       // The fetch call now sends the new 'time' field along with other form data
-      const response = await fetch("https://servax-hsp-server.onrender.com/api/form/contact", {
+      const response = await fetch("https://servax-hsp-backend.vercel.app/api/form/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

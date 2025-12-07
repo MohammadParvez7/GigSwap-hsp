@@ -20,7 +20,7 @@ export const Register = () => {
 
   const { storeTokenInLS } = useAuth();
 
-  const URL = "https://servax-hsp-server.onrender.com/api/auth/register";
+  const URL = "https://servax-hsp-backend.vercel.app/api/auth/register";
 
   const handleInput = (e) => {
     console.log(e);

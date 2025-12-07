@@ -12,7 +12,7 @@ const errorMiddleware=require ("./middlewares/error-middleware");
 
 
 const corsOptions = {
-  origin: "https://servax-hsp-client.onrender.com",
+  origin: "https://servax-hsp-frontend.vercel.app",
   methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
   credentials: true,
 };
