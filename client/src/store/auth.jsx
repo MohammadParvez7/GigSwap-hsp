@@ -35,7 +35,7 @@ export const AuthProvider = ({ children }) => {
         return;
       }
 
-      const response = await fetch("https://gigswap-hsp-server.onrender.com/api/auth/user", {
+      const response = await fetch("https://gig-swap-hsp-backend.vercel.app/api/auth/user", {
         method: "GET",
         headers: {
           Authorization: authorizationToken,
