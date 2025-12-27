@@ -23,7 +23,7 @@ export const About = () => {
                 needs and goals.
               </p>
               <p>
-                <div className="features" >Customer-Centric Approach:</div>We prioritize your satisfaction and
+            <div className="features" >Customer-Centric Approach:</div>We prioritize your satisfaction and
                 provide top-notch support to address your IT concerns.
               </p>
               <p>
