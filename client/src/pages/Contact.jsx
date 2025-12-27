@@ -141,6 +141,7 @@ export const Contact = () => {
                   name="date"
                   value={contact.date}
                   onChange={handleInput}
+                  min={new Date().toISOString().split("T")[0]}
                   required
                 />
               </div>
