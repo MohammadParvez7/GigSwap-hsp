@@ -141,7 +141,6 @@ export const Contact = () => {
                   name="date"
                   value={contact.date}
                   onChange={handleInput}
-                  min={todayDate}
                   required
                 />
               </div>
