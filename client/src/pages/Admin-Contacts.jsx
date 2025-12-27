@@ -71,7 +71,7 @@ export const AdminContacts = () => {
          <p>{address}</p>
       
         
-         <button className="btn" onClick={()=>deleteContactById(_id)}>delete</button>
+         {/* <button className="btn" onClick={()=>deleteContactById(_id)}>delete</button> */}
         </div>
        )
 
