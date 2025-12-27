@@ -76,10 +76,11 @@ body {
 
 .features {
   color: #fff;
-  background-color: #dd73fa;
+  background-color: #559eff;
   font-weight: bold;
   width: 170px;
   margin-left: 5px;
+  border-radius: 10%;
 }
 
 
