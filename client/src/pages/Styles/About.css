@@ -74,13 +74,12 @@ body {
   color: #fff;
 }
 
-.features{
-
-  color: rgb(7, 38, 132);
-  background-color: rgb(104, 210, 255);
-  
-   
+.features {
+  color: #fff;
+  background-color: #dd73fa;
+  font-weight: bold;
 }
+
 
 
 
