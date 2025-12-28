@@ -41,7 +41,7 @@ const contactForm = async (req, res) => {
             </li>
           </ul>
           <p>If you have any questions, please reply to this email.</p>
-          <p>Best regards,<br>Servax.</p>
+          <p>Best regards,<br>GigSwap.</p>
         </div>
       `,
     };
