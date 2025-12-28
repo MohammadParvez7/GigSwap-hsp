@@ -19,7 +19,7 @@ export const Navbar = () => {
     <header>
       <div className="container navbar">
         <div className="logo-brand">
-          <NavLink to="/">Servax</NavLink>
+          <NavLink to="/">GigSwap</NavLink>
         </div>
         <div className="menu-toggle" onClick={toggleMenu}>
           {isSidebarOpen ? <FaTimes /> : <FaBars />}
