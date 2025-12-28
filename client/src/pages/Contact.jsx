@@ -159,18 +159,39 @@ export const Contact = () => {
                 />
               </div>
 
-              <div>
-                <label htmlFor="address">Address</label>
-                <input
-                  type="text"
-                  name="address"
-                  id="address"
-                  autoComplete="off"
-                  value={contact.address}
-                  onChange={handleInput}
-                  required
-                />
-              </div>
+             <div>
+  <label htmlFor="address">Address (Nanded City Areas)</label>
+  <input
+    type="text"
+    name="address"
+    id="address"
+    list="nanded-areas" // datalist ki ID yahan connect hogi
+    autoComplete="off"
+    value={contact.address}
+    onChange={handleInput}
+    placeholder="Type area name..."
+    required
+  />
+  
+  {/* Nanded ke popular areas ki list */}
+  <datalist id="nanded-areas">
+    <option value="Vazirabad" />
+    <option value="Taroda Naka" />
+    <option value="Workshops" />
+    <option value="Shringar Ji Nagar" />
+    <option value="Bhagya Nagar" />
+    <option value="Cidco" />
+    <option value="Hudco" />
+    <option value="Deglour Naka" />
+    <option value="Chaitanya Nagar" />
+    <option value="Kautha" />
+    <option value="Shivaji Nagar" />
+    <option value="Malegaon Road" />
+    <option value="Anand Nagar" />
+    <option value="Ganesh Nagar" />
+    <option value="Baba Nagar" />
+  </datalist>
+</div>
 
               <div></div>
               <div>
