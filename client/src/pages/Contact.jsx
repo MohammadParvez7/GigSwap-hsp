@@ -51,19 +51,24 @@ export const Contact = () => {
 
     try {
       // The fetch call now sends the new 'time' field along with other form data
-      const response = await fetch("https://gig-swap-hsp-backend.vercel.app/api/form/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(contact),
-      });
+      const response = await fetch(
+        "https://gig-swap-hsp-backend.vercel.app/api/form/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(contact),
+        }
+      );
 
       if (response.ok) {
         setContact(defaultContactFormData);
         const data = await response.json();
         console.log(data);
-        toast.success("Service Booked Successfully. A confirmation email has been sent.");
+        toast.success(
+          "Service Booked Successfully. A confirmation email has been sent."
+        );
       } else {
         toast.error("Failed to book service.");
       }
@@ -132,7 +137,7 @@ export const Contact = () => {
                   <option> Pest Control </option>
                 </select>
               </div>
-              
+
               {/* Added the new time input field */}
               <div>
                 <label htmlFor="date">Date</label>
@@ -145,7 +150,7 @@ export const Contact = () => {
                   required
                 />
               </div>
-              
+
               {/* Added the new time input field */}
               <div>
                 <label htmlFor="time">Time</label>
@@ -159,39 +164,27 @@ export const Contact = () => {
                 />
               </div>
 
-             <div>
-  <label htmlFor="address">Address (Nanded City Areas)</label>
-  <input
-    type="text"
-    name="address"
-    id="address"
-    list="nanded-areas" // datalist ki ID yahan connect hogi
-    autoComplete="off"
-    value={contact.address}
-    onChange={handleInput}
-    placeholder="Type area name..."
-    required
-  />
-  
-  {/* Nanded ke popular areas ki list */}
-  <datalist id="nanded-areas">
-    <option value="Vazirabad" />
-    <option value="Taroda Naka" />
-    <option value="Workshops" />
-    <option value="Shringar Ji Nagar" />
-    <option value="Bhagya Nagar" />
-    <option value="Cidco" />
-    <option value="Hudco" />
-    <option value="Deglour Naka" />
-    <option value="Chaitanya Nagar" />
-    <option value="Kautha" />
-    <option value="Shivaji Nagar" />
-    <option value="Malegaon Road" />
-    <option value="Anand Nagar" />
-    <option value="Ganesh Nagar" />
-    <option value="Baba Nagar" />
-  </datalist>
-</div>
+              <div>
+                <label htmlFor="address">Address (Nanded City Areas)</label>
+                <select
+                  name="address"
+                  id="address"
+                  value={contact.address}
+                  onChange={handleInput}
+                  required
+                  style={{ width: "100%", padding: "8px", marginTop: "5px" }}
+                >
+                  <option value="">-- Choose Area --</option>
+                  <option value="Vazirabad">Vazirabad</option>
+                  <option value="Taroda Naka">Taroda Naka</option>
+                  <option value="Workshops">Workshops</option>
+                  <option value="Bhagya Nagar">Bhagya Nagar</option>
+                  <option value="Cidco">Cidco</option>
+                  <option value="Hudco">Hudco</option>
+                  <option value="Kautha">Kautha</option>
+                  {/* Baaki sabhi areas yahan add karein */}
+                </select>
+              </div>
 
               <div></div>
               <div>
