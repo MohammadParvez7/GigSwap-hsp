@@ -159,17 +159,40 @@ export const Contact = () => {
                 />
               </div>
 
+              
               <div>
-                <label htmlFor="address">Address</label>
-                <input
-                  type="text"
+                <label htmlFor="address">Address (Nanded City Areas)</label>
+                <select
                   name="address"
                   id="address"
-                  autoComplete="off"
                   value={contact.address}
                   onChange={handleInput}
                   required
-                />
+                  style={{ width: "100%", padding: "8px", marginTop: "5px" }}
+                >
+                  <option value="">-- Choose Area --</option>
+                  <option value="Vazirabad">Vazirabad</option>
+                  <option value="Taroda Naka">Taroda Naka</option>
+                  <option value="Workshops">Workshops</option>
+                  <option value="Bhagya Nagar">Bhagya Nagar</option>
+                  <option value="Cidco">Cidco</option>
+                  <option value="Hudco">Hudco</option>
+                  <option value="Kautha">Kautha</option>
+                  <option value="Peer Burhan Nagar">Peer Burhan Nagar</option>
+                  <option value="Khadak Pura">Khadak Pura</option>
+                  <option value="Barki Chowk">Barki Chowk</option>
+                  <option value="VishnuPuri">VishnuPuri</option>
+                  <option value="Shrinagar">Shrinagar</option>
+                  <option value="Degloor Naka">Degloor Naka</option>
+                  <option value="Shivaji Nagar">Shivaji Nagar</option>
+                  <option value="Gokul Nagar">Gokul Nagar</option>
+                  <option value="Kala Mandir">Kala Mandir</option>
+                  <option value="Barkat Pura">Barkat Pura</option>
+                  <option value="Waje Gaon">Waje Gaon</option>
+                  <option value="Raj Corner">Raj Corner</option>
+
+                  {/* Baaki sabhi areas yahan add karein */}
+                </select>
               </div>
 
               <div></div>
