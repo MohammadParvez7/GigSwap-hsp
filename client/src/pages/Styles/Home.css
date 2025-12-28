@@ -88,14 +88,14 @@
 
 /* Primary Button */
 .first-btn {
-  background-color: #577cec;
+  background-color: #c432ec;
   color: #fff;
-  box-shadow: #675ee8;
+  box-shadow: #d57bed;
 }
 
 /* Hover effect for Primary */
 .first-btn:hover {
-  background-color: #3c13a3;
+  background-color: #770596;
   transform: translateY(-2px);
   box-shadow: 0 6px 10px rgba(0, 123, 255, 0.2);
 }
@@ -103,13 +103,13 @@
 /* Secondary Button */
 .secondary-btn {
   background-color: transparent;
-  color: #675ee8;
-  border: 2px solid #675ee8;
+  color: #c432ec;
+  border: 2px solid #c432ec;
 }
 
 /* Hover effect for Secondary */
 .secondary-btn:hover {
-  background-color: #4973f0;
+  background-color: #c432ec;
   color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 6px 10px rgba(0, 123, 255, 0.2);

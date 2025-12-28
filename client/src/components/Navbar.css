@@ -1,7 +1,7 @@
 /* ========== Base styles ========== */
 
 header {
-  background-color: #8c93f9;
+  background-color: #bc47fa;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -76,7 +76,7 @@ nav {
     height: auto; /* Adjust height dynamically */
     max-height: 60%; /* Limit to 60% of the screen */
     width: 70%;
-    background-color: #4149e8;
+    background-color: #780fd3;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

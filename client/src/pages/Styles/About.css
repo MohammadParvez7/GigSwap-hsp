@@ -56,7 +56,7 @@ body {
   transition: all 0.3s ease;
 }
 .about-btn {
-  background-color: #577cec; /* main purple background */ /* SheCodes example */
+  background-color: #c432ec; /* main purple background */ /* SheCodes example */
   color: #fff;
 }
 .about-btn:hover {
@@ -66,11 +66,11 @@ body {
 }
 .about-btn-secondary {
   background-color: transparent;
-  color:#675ee8;
-  border: 2px solid #675ee8;
+  color:#c432ec;
+  border: 2px solid #c432ec;
 }
 .about-btn-secondary:hover {
-  background-color: #4973f0;
+  background-color: #c432ec;
   color: #fff;
 }
 
