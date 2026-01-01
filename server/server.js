@@ -6,6 +6,7 @@ const authRoute = require("./router/auth-router");
 const contactRoute=require("./router/contact-router");
 const serviceRoute=require("./router/service-router");
 const adminRoute =require("./router/admin-router");
+const workerRoute=require("./router/worker-router");
 const connectDb=require("./utils/db");
 const errorMiddleware=require ("./middlewares/error-middleware");
 
@@ -29,7 +30,12 @@ app.use("/api/data",serviceRoute);
 
 // lets define admin route
 app.use("/api/admin",adminRoute);
+
+// Worker Route
+app.use("/api/worker", workerRoute);
+
 app.use(errorMiddleware);
+
 
 // app.get("/", (req, res) => {
 //   res.status(200).send("Welcome to Home");
