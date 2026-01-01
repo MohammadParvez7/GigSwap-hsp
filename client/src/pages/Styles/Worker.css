@@ -1,0 +1,61 @@
+/* Worker Contacts CSS */
+
+.worker-contacts-section {
+  padding: 2rem;
+  background-color: #f9fafb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.worker-contacts-section h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.container.worker-users {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.container.worker-users > div {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.container.worker-users > div:hover {
+  transform: translateY(-5px);
+}
+
+.container.worker-users p {
+  margin: 0.5rem 0;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.container.worker-users p:first-of-type {
+  font-weight: 600;
+  color: #222;
+}
+
+/* Optional button (future use) */
+.btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #2563eb; /* worker blue */
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1e40af;
+}
