@@ -6,6 +6,7 @@ export const WorkerContacts = () => {
   const [contactData, setContactData] = useState([]);
   const { authorizationToken } = useAuth();
 
+  // ✅ GET worker contacts
   const getContactsData = async () => {
     try {
       const response = await fetch(
@@ -13,7 +14,7 @@ export const WorkerContacts = () => {
         {
           method: "GET",
           headers: {
-            Authorization: `Bearer ${authorizationToken}`,
+            Authorization: authorizationToken,
           },
         }
       );
@@ -37,23 +38,29 @@ export const WorkerContacts = () => {
     <section className="worker-contacts-section">
       <h1>Booked Services</h1>
 
-      <div className="container worker-users">
-        {contactData.length === 0 ? (
-          <p>No bookings found</p>
-        ) : (
-          contactData.map(
-            ({ username, email, message, address, time, date, _id }) => (
-              <div key={_id} className="contact-card">
-                <p><strong>Name:</strong> {username}</p>
-                <p><strong>Email:</strong> {email}</p>
-                <p><strong>Message:</strong> {message}</p>
-                <p><strong>Date:</strong> {date}</p>
-                <p><strong>Time:</strong> {time}</p>
-                <p><strong>Address:</strong> {address}</p>
-              </div>
-            )
-          )
-        )}
+      <div className="container worker-contacts">
+        {contactData.map((curContactData) => {
+          const {
+            username,
+            email,
+            message,
+            address,
+            time,
+            date,
+            _id,
+          } = curContactData;
+
+          return (
+            <div key={_id} className="contact-card">
+              <p><strong>Name:</strong> {username}</p>
+              <p><strong>Email:</strong> {email}</p>
+              <p><strong>Message:</strong> {message}</p>
+              <p><strong>Date:</strong> {date}</p>
+              <p><strong>Time:</strong> {time}</p>
+              <p><strong>Address:</strong> {address}</p>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
