@@ -74,6 +74,16 @@ body {
   color: #fff;
 }
 
+.features {
+  color: #fff;
+  background-color: #559eff;
+  font-weight: bold;
+  width: 170px;
+  margin-left: 5px;
+  border-radius: 10%;
+}
+
+
 
 
 /* Mobile / Tablet */

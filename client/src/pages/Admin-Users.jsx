@@ -10,7 +10,11 @@ export const AdminUsers = () => {
 
   const getAllUsersData = async () => {
     try {
+<<<<<<< HEAD
       const response = await fetch("https://gig-swap-hsp-server.vercel.app/api/admin/users", {
+=======
+      const response = await fetch(" https://gig-swap-hsp-backend.vercel.app/api/admin/users", {
+>>>>>>> 75913bea62488062815fa5c727bde8148a3d0307
         method: "GET",
         headers: {
           Authorization: authorizationToken,
@@ -29,7 +33,11 @@ export const AdminUsers = () => {
   const deleteUser = async (id) => {
     try {
       const response = await fetch(
+<<<<<<< HEAD
         ` https://gig-swap-hsp-server.vercel.app/api/admin/users/delete/${id}`,
+=======
+        ` https://gig-swap-hsp-backend.vercel.app/api/admin/users/delete/${id}`,
+>>>>>>> 75913bea62488062815fa5c727bde8148a3d0307
         {
           method: "DELETE",
           headers: {

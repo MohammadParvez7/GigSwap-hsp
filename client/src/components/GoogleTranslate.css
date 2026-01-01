@@ -1,0 +1,58 @@
+/* src/components/Styles/GoogleTranslate.css */
+
+/* Desktop and larger screens (default) */
+#google_translate_element_container {
+  /* Position the container relative to the viewport */
+  position: fixed;
+
+  /* Adjust this value to place the buttons higher, e.g., 20px from the top */
+  top: 120px;
+  left: 20px;
+
+  z-index: 9999;
+  display: flex; /* Arrange buttons in a horizontal line */
+  align-items: center; /* Align items vertically */
+  gap: 13px; /* Space between buttons */
+}
+
+/* Hide the Google Translate dropdown element */
+#google_translate_element {
+  display: none;
+}
+
+/* Style for the language buttons */
+#google_translate_element_container button {
+  background-color: rgb(108, 80, 147);
+  color: #ecf0f1;
+  border: 1px solid rgb(234, 233, 235);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+#google_translate_element_container button:hover {
+  background-color: rgb(56, 92, 236); /* Darker shade on hover */
+}
+
+/* Hide Google Translate's logo and tooltip */
+.goog-logo-link,
+.goog-te-gadget .goog-tooltip,
+.goog-te-gadget {
+  display: none !important;
+}
+
+/* --- */
+
+/* ## Mobile Screens */
+
+@media screen and (max-width: 600px) {
+
+  #google_translate_element_container {
+   display: none;
+  }
+
+ 
+}

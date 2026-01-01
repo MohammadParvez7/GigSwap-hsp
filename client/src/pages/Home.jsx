@@ -4,6 +4,7 @@ import { Testimonials } from "../components/Testimonials";
 import { useAuth } from "../store/auth";
 import { NavLink } from "react-router-dom";
 
+
 export const Home = () => {
   const { isLoggedIn } = useAuth();
   return (
@@ -12,6 +13,7 @@ export const Home = () => {
         <section className="section-hero">
           <div className="container grid grid-two-cols">
             <div className="hero-content">
+              
               <p>A Home Service Provider</p>
               <h1>Welcome to GigSwap</h1>
               <p>

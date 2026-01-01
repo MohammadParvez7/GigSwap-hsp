@@ -9,7 +9,11 @@ export const AdminContacts = () => {
   const { authorizationToken } = useAuth();
   const getContactsData = async () => {
     try {
+<<<<<<< HEAD
       const response = await fetch("https://gig-swap-hsp-server.vercel.app/api/admin/contacts", {
+=======
+      const response = await fetch("https://gig-swap-hsp-backend.vercel.app/api/admin/contacts", {
+>>>>>>> 75913bea62488062815fa5c727bde8148a3d0307
         method: "GET",
         headers: {
           Authorization: authorizationToken,
@@ -32,7 +36,11 @@ export const AdminContacts = () => {
    
      try {
       
+<<<<<<< HEAD
        const response =await fetch(`https://gig-swap-hsp-server.vercel.app/api/admin/contacts/delete/${id}`,{
+=======
+       const response =await fetch(`https://gig-swap-hsp-backend.vercel.app/api/admin/contacts/delete/${id}`,{
+>>>>>>> 75913bea62488062815fa5c727bde8148a3d0307
          method:"DELETE",
          headers:{
           Authorization:authorizationToken,
@@ -71,7 +79,7 @@ export const AdminContacts = () => {
          <p>{address}</p>
       
         
-         <button className="btn" onClick={()=>deleteContactById(_id)}>delete</button>
+         {/* <button className="btn" onClick={()=>deleteContactById(_id)}>delete</button> */}
         </div>
        )
 

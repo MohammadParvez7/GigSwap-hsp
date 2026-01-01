@@ -51,6 +51,7 @@ export const Contact = () => {
 
     try {
       // The fetch call now sends the new 'time' field along with other form data
+<<<<<<< HEAD
       const response = await fetch("https://gig-swap-hsp-server.vercel.app/api/form/contact", {
         method: "POST",
         headers: {
@@ -58,12 +59,26 @@ export const Contact = () => {
         },
         body: JSON.stringify(contact),
       });
+=======
+      const response = await fetch(
+        "https://gig-swap-hsp-backend.vercel.app/api/form/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(contact),
+        }
+      );
+>>>>>>> 75913bea62488062815fa5c727bde8148a3d0307
 
       if (response.ok) {
         setContact(defaultContactFormData);
         const data = await response.json();
         console.log(data);
-        toast.success("Service Booked Successfully. A confirmation email has been sent.");
+        toast.success(
+          "Service Booked Successfully. A confirmation email has been sent."
+        );
       } else {
         toast.error("Failed to book service.");
       }
@@ -132,7 +147,7 @@ export const Contact = () => {
                   <option> Pest Control </option>
                 </select>
               </div>
-              
+
               {/* Added the new time input field */}
               <div>
                 <label htmlFor="date">Date</label>
@@ -145,7 +160,7 @@ export const Contact = () => {
                   required
                 />
               </div>
-              
+
               {/* Added the new time input field */}
               <div>
                 <label htmlFor="time">Time</label>

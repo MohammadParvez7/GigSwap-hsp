@@ -10,6 +10,7 @@ import { Navbar } from "./components/Navbar";
 import { Error } from "./pages/Error";
 import { Footer } from "./components/Footer/Footer";
 import { Logout } from "./pages/Logout";
+import { WokerDashboard } from "./pages/WorkerDashboard";
 import { AdminLayout } from "./components/layouts/Admin-Layout";
 import { AdminUsers } from "./pages/Admin-Users";
 import { AdminContacts } from "./pages/Admin-Contacts";
@@ -22,12 +23,22 @@ import Plumbing from "./pages/Details/Plumbing";
 import Carpentry from "./pages/Details/Carpentry";
 import Acrepair from "./pages/Details/Acrepair";
 import PestControl from "./pages/Details/PestControl";
+import { GoogleTranslate } from "./components/GoogleTranslate";
+
 
 const App = () => {
   return (
     <>
+     
+      <div className="app-container">
+        
       <BrowserRouter>
+<<<<<<< HEAD
         <Navbar />
+=======
+        <Navbar/>
+        <GoogleTranslate />
+>>>>>>> 75913bea62488062815fa5c727bde8148a3d0307
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -36,6 +47,7 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
+          <Route path="/worker" element={<WokerDashboard/>}/>
           <Route path="*" element={<Error />} />
           <Route path="/cleaner" element={<Cleaner />} />
           <Route path="/electrician" element={<Electrician />} />
@@ -56,6 +68,7 @@ const App = () => {
         </Routes>
         <Footer />
       </BrowserRouter>
+      </div>
     </>
   );
 };
