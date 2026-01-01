@@ -33,12 +33,7 @@ const App = () => {
       <div className="app-container">
         
       <BrowserRouter>
-<<<<<<< HEAD
         <Navbar />
-=======
-        <Navbar/>
-        <GoogleTranslate />
->>>>>>> 75913bea62488062815fa5c727bde8148a3d0307
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

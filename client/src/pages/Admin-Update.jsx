@@ -19,11 +19,7 @@ export const AdminUpdate = () => {
   const getSingleUserData = async (id) => {
     try {
       const response = await fetch(
-<<<<<<< HEAD
         `https://gig-swap-hsp-server.vercel.app/api/admin/users/${params.id}`,
-=======
-        ` https://gig-swap-hsp-backend.vercel.app/api/admin/users/${params.id}`,
->>>>>>> 75913bea62488062815fa5c727bde8148a3d0307
         {
           method: "GET",
           headers: {
@@ -65,11 +61,7 @@ export const AdminUpdate = () => {
 
     try {
       const response = await fetch(
-<<<<<<< HEAD
         ` https://gig-swap-hsp-server.vercel.app/api/admin/users/update/${params.id}`,
-=======
-        `https://gig-swap-hsp-backend.vercel.app/api/admin/users/update/${params.id}`,
->>>>>>> 75913bea62488062815fa5c727bde8148a3d0307
         {
           method: "PATCH",
           headers: {
