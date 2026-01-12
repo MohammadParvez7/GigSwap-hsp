@@ -23,7 +23,7 @@ export const Footer = () => {
 
         {/* Follow Us Section */}
         <div className="footer-section">
-          <h4>Follow Us</h4>
+          <h4>Follow Us..</h4>
           <div className="footer-socials">
             <a href="#"><FaFacebook /></a>
             <a href="#"><FaInstagram /></a>
