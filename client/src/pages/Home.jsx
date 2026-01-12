@@ -20,7 +20,7 @@ export const Home = () => {
                 Need reliable home services? Servax brings the best local
                 professionals—cleaning, repairs, gardening, and more—right to
                 your doorstep. Our carefully vetted providers ensure quality,
-                convenience, and peace of mind every time.
+                convenience, and peace of mind every time..
               </p>
 
               <div className="btn-group">
